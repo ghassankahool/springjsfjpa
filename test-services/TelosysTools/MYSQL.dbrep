@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Telosys Database Repository --><root>
-<tableList databaseId="0" databaseName="MYSQL" databaseProductName="MySQL" generation="2016-03-24 00:22:35">
+<tableList databaseId="0" databaseName="MYSQL" databaseProductName="MySQL" generation="2016-03-25 01:09:10">
 <table catalog="mydb" databaseType="TABLE" javaBean="Classroom" name="classroom" schema="">
 <column dbComment="" dbDefaultValue="" dbName="class_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="classId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Class id" notNull="true" selected="true"/>
 <column dbComment="" dbDefaultValue="" dbName="classroom_name" dbNotNull="false" dbPosition="2" dbSize="45" dbTypeName="VARCHAR" inputType="text" javaName="classroomName" javaType="java.lang.String" jdbcTypeCode="12" label="Classroom name" maxLength="45" notNull="false" selected="true"/>
 <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="FKbsfqs08c7qo7odeq48trxq1fx" id="LINK_FK_FKbsfqs08c7qo7odeq48trxq1fx_I" inverseSideOf="LINK_FK_FKbsfqs08c7qo7odeq48trxq1fx_O" javaName="listOfStudent" javaType="java.util.List" joinTableName="" mappedBy="classroom" optional="UNDEFINED" owningSide="false" sourceTableName="classroom" targetEntity="Student" targetTableName="student" used="true"/>
-</table>
-<table catalog="mydb" databaseType="TABLE" javaBean="HibernateSequence" name="hibernate_sequence" schema="">
-<column dbComment="" dbDefaultValue="" dbName="next_val" dbNotNull="false" dbPosition="1" dbSize="19" dbTypeName="BIGINT" inputType="number" javaName="nextVal" javaType="java.lang.Long" jdbcTypeCode="-5" label="Next val" notNull="false" selected="true"/>
 </table>
 <table catalog="mydb" databaseType="TABLE" javaBean="Student" name="student" schema="">
 <column dbComment="" dbDefaultValue="" dbName="student_id" dbNotNull="true" dbPosition="1" dbPrimaryKey="true" dbSize="10" dbTypeName="INT" inputType="number" javaName="studentId" javaType="java.lang.Integer" jdbcTypeCode="4" label="Student id" notNull="true" selected="true"/>

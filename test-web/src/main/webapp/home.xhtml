@@ -10,27 +10,16 @@
 		<h1><h:outputText value="Hello From JSF" /></h1>
 		Message : #{homeBean.message}<br />
 		<br />
-		<h2>Tasks</h2>
+		<h2>Student</h2>
 		<table>
-			<ui:repeat value="#{taskBB.tasks}" var="v_task">
+			<ui:repeat value="#{studentBean.listAll()}" var="std">
 				<tr>
-					<td>#{v_task.id}</td>
-					<td>#{v_task.description}</td>
+					<td>#{std.studentId}</td>
+					<td>#{std.studentName}</td>
 				</tr>
 			</ui:repeat>
 		</table>
 
-		<h:form>
-			<div jsf:id="wrapper"
-				style="border-top: 1px solid #d0d0d0; margin-top: 12px; padding-top: 12px">
-				<h:inputText value="#{taskBB.task.description}" id="taskDesc" p:placeholder="Type a task ID" maxlength="48" required="true" label="Task">
-					<f:validateLength maximum="48"/>
-				</h:inputText>
-				<h:commandButton action="#{taskBB.saveTask}" value="Add" />
-				<h:message for="taskDesc" style="color : red;padding-left : 8px"/>
-			</div>
-
-		</h:form>
 		
 	</ui:define>
 </ui:composition>
